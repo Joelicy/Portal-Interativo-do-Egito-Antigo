@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: none;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.container{
+    max-width: 1280px;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-nome{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-nome a{
+   text-decoration: none;
+   color: white;
+   text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.678);
+}
+
+header.rolagem{
+    background-color: #401801;
+    padding: 20px 0%;
+}
+
+header.rolagem a{
+    color: #F2DFBB;
+    text-shadow: none;
+}
+
+header{
+    width: 100%;
+    padding: 60px 0%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.8s ease-in-out;
+    z-index: 2;
+}
+
+header ul{
+    list-style-type: none;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.678);
+    padding-bottom: 5px;
+    font-size: 15px;
+    z-index: 1000;
+}
+
+.logo{
+    width: 88.18px;
+    height: 49px;
+    background-image: url(img/551ddd5f-5f38-46dd-8804-c9bd41c24afa.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dropdown-menu{
+    position: absolute;
+    display: none;
+    background-color: #401801;
+    margin-top: 5px;
+    width: 170px;
+}
+
+.dropdown-menu a{
+    display: block;
+    padding: 10px;
+    padding-right: 11px;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.dropdown-menu ul{
+    display: block;
+    margin: 5px;
+}
+
+nav ul li a{
+    position: relative;
+}
+
+nav ul li a::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+#header.rolagem nav ul li a::after{
+    background-color: #F2DFBB;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+section{
+    min-height: 100vh;
+    background-color: #A66F3F;
+    padding: 130px 50px 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slider-container {
+    width: 80%; /* Largura do slider */
+    width: 90vw;
+    position: relative;
+    overflow: hidden; /* Importante para esconder os slides fora da tela */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #F2CF8D;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animação suave */
+}
+
+.product-slide {
+    min-width: 25%;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+    flex-shrink: 0; /* Impede que os slides encolham */
+}
+
+.product-slide img {
+    width: 200px;
+    height: 145.66PX;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.product-slide iframe {
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-slide p {
+    max-width: 200px;
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.product-slide h2 {
+    max-width: 186.66px;
+    margin: 10px 0;
+    color: #401801;
+    font-size: 15px;
+}
+
+.slider-container h1 {
+    margin: 10px 10px;
+    color: #401801;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f2cf8d86;
+    color:black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 50%;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slider-button.prev {
+    left: 10px;
+}
+
+.slider-button.next {
+    right: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .product-slide {
+        min-width: 50%; /* Exibe 2 produtos em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-slide {
+        min-width: 100%; /* Exibe 1 produto em telas muito pequenas */
+    }
+}
+
+footer{
+    background-color: #401801;
+    bottom: 0;
+    left: 0;
+    height: 270px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tudo-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+}
+
+.logo-footer{
+    width: 242.5px;
+    height: 134.75px;
+}
+
+.tudo-rede{
+    display: flex;
+    gap: 150px;
+}
+
+.tudo-rede h2{
+    margin-top: 40px;
+}
+
+.tudo-rede a{
+    text-decoration: none;
+    color: #F2DFBB;
+}
+
+footer h2{
+    margin-bottom: 10px;
+    color: #F2CF8D;
+}
+
+footer ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li a:hover{
+    cursor: pointer;
+    color: #58F5C8;
+}
+
+footer ul li{
+    margin-bottom: 5px;
+}
+
+.tudo-tudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.icone{
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.botao:hover{
+    transform: scale(1.1);
+}
+
+#footer{
+    width: 100%;
+    height: 30px;
+    background-color: #2E1101;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    color: #F2DFBB;
+}
+.botao{
+    width: 100px;
+    border-radius: 10px;
+    height: 34px;
+    background-color: #58F5C8;
+    border: 0;
+    cursor: pointer;
+}
